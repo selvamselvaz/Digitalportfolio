@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="Style.css">
+
+<title>Hotel & Restaurant</title>
+</head>
+<body>
+    <header>
+        <nav>
+           
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#res-form">Reservations</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+<section id="home" class="hero">
+<h1>Welcome To Our Hotel & Restaurant</h1>
+<p>Delicious cuisine in a cozy atmosphere.</p>
+</section>
+<section class="menu">
+    <h2>Available Dish</h2>
+</br>
+    <div class="menu-items">
+        <div class="menu-item">
+            <img src="h1.jpeg" alt="Item 1">
+            <h3>White Truffles</h3>
+            <p>"Let them eat cake." - Marie Antoinette.
+                "Birthdays are nature's way of telling us to eat more cake." - Unknown.
+                "All you need is love. ...</p>
+            <p class="price">$6.99</p>
+        </div>
+        <div class="menu-item">
+            <img src="h2.jpeg" alt="Item 1">
+            <h3>Burger</h3>
+            <p>"Lettuce have a burgerlicious time!"
+                "I'm not a veggie, but I'm feeling extra 'beef-icient' with this burger."
+                "Burger cravings are just 'medium-rare' to happen."
+                "Cheese it up! ...</p>
+            <p class="price">$10.99</p>
+        </div>
+        <div class="menu-item">
+            <img src="h3.jpeg" alt="Item 3">
+            <h3>Briyani</h3>
+            <p> A mixed rice dish originating among the Muslims of South Asia. It is made with spices, vegetables, rice, and usually some type of meat </p>
+            <p class="price">$12.99</p>
+        </div>
+        <div class="menu-item">
+            <img src="h7.jpeg" alt="Item 3">
+            <h3>Dosa</h3>
+            <p>A dosa is a thin savory crepe in South Indian cuisine made from a fermented batter of ground black lentils and rice.</p>
+            <p class="price">$5.99</p>
+        </div>
+
+        <!-- Add more menu items as needed -->
+        <div class="menu-item">
+            <img src="h5.jpeg" alt="Item 4">
+            <h3>Gril-Briyani</h3>
+            <p>
+                Biryani is popular because of: Its rich flavour. It is a hearty meal that one can enjoy at any hour of the day or night.</p>
+            <p class="price">$15.99</p>
+        </div>
+        <div class="menu-item">
+            <img src="h6.jpeg" alt="Item 5">
+            <h3>Sanvege</h3>
+            <p>So long as you have food in your mouth you have solved all questions for the time being.</p>
+            <p class="price">$10.99</p>
+        </div>
+    </div>
+</section>
+<section class="available-rooms">
+    <h2>Available Rooms</h2>
+    <div class="room">
+        <img src="r1.jpeg" alt="Room 1">
+        <h3>Deluxe Suite</h3>
+        <p>Spacious suite with a stunning view of the city. King-size bed, luxurious amenities, and a private balcony.</p>
+        <p class="price">$199 per night</p>
+    </div>
+    <div class="room">
+        <img src="r3.jpeg" alt="Room 2">
+        <h3>Premium Room</h3>
+        <p>Comfortable room with a queen-size bed, ideal for business travelers. Work desk and high-speed Wi-Fi included.</p>
+        <p class="price">$129 per night</p>
+    </div>
+    <div class="room">
+        <img src="r4.jpeg" alt="Room 3">
+        <h3>Family Suite</h3>
+        <p>Spacious suite with two bedrooms, perfect for families. Includes a kitchenette and a cozy living area.</p>
+        <p class="price">$249 per night</p>
+    </div>
+    <div class="room">
+        <img src="r8.jpeg" alt="Room 3">
+        <h3>Family Suite</h3>
+        <p>Spacious suite with two bedrooms, perfect for families. Includes a kitchenette and a cozy living area.</p>
+        <p class="price">$249 per night</p>
+    </div>
+    <!-- Add more room items as needed -->
+</section>
+<section class="reservations">
+    <h2>Reservations</h2>
+    <form id="res-form" onsubmit="makeReservation(); return false;">
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div>
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required>
+        </div>
+        <div>
+            <label for="time">Time:</label>
+            <input type="time" id="time" name="time" required>
+        </div>
+        <div>
+            <label for="guests">Number Of Guests:</label>
+            <input type="number" id="guests" name="guests" required>
+        </div>
+        <div>
+            <button type="submit">Make Reservations</button>
+        </div>
+    </form>
+</section>
+
+<section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <p>Have questions or feedback? Feel free to contact us using the form below.</p>
+    <form id="contact-form">
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div>
+            <label for "email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+        </div>
+        <div>
+            <button type="submit">Send Message</button>
+        </div>
+    </form>
+</section>
+    <div class="footer-content">
+        <p>&copy; 2023 Your Hotel & Restaurant</p>
+    </div>
+</footer>
+     
+    <script>
+        function makeReservation() {
+            // Get form input values for reservations
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var date = document.getElementById('date').value;
+            var time = document.getElementById('time').value;
+            var guests = document.getElementById('guests').value;
+
+            // You can add your reservation handling logic here
+            // For demonstration, we'll just display an alert
+            alert('Reservation Details:\nName: ' + name + '\nEmail: ' + email + '\nDate: ' + date + '\nTime: ' + time + '\nGuests: ' + guests + '\nReservation made successfully.');
+        }
+
+        function submitContact() {
+            // Get form input values for contact
+            var contactName = document.getElementById('contact-name').value;
+            var contactEmail = document.getElementById('contact-email').value;
+            var contactMessage = document.getElementById('contact-message').value;
+
+            // You can add your contact form handling logic here
+            // For demonstration, we'll just display an alert
+            alert('Contact Form Details:\nName: ' + contactName + '\nEmail: ' + contactEmail + '\nMessage: ' + contactMessage + '\nMessage sent successfully.');
+        }
+    </script>
+</body>
+
+</html>
